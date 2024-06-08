@@ -1,11 +1,20 @@
 getgenv().AltcSettings = {
-    ["Host"] = "ItayKingDev", --// Username only!
+    ["Host"] = "FRFMFNMMFFDM", --// Username only!
     ["Fps"] = 5, --// Numbers only!!!
     ["Perfix"] = ".", --// Perfix for chat commands..
     ["Alts"] = { --// Alts only usernames
-        alt1 = "Username1",
-        alt2 = "Username2",
-        alt3 = "Username3"
+        alt1 = "HermesDHC11",
+        alt2 = "HermesDHC12",
+        alt3 = "HermesDHC13",
+        alt4 = "HermesDHC14",
+        alt5 = "HermesDHC15",
+        alt6 = "HermesDHC16",
+        alt7 = "HermesDHC17",
+        alt8 = "HermesDHC18",
+        alt9 = "HermesDHC19",
+        alt10 = "HermesDHC20",
+        alt11 = "HermesDHC21",
+        alt12 = "HermesDHC22"
     }
 }
 
@@ -665,7 +674,7 @@ local players = game:GetService("Players")
 
 local hostuser = players:FindFirstChild(getgenv().AltcSettings["Host"])
     
-if players.LocalPlayer.Name == getgenv()["Host"] then
+if players.LocalPlayer.Name == getgenv().AltcSettings["Host"] then
     setHostGui()
 end
 
@@ -879,9 +888,9 @@ end
 
 
 hostuser.Chatted:Connect(function(msg)
-    if msg == getgenv()["Perfix"].."setup bank" then
+    if msg == getgenv().AltcSettings["Perfix"].."setup bank" then
 		setupbank()
-    elseif msg == getgenv()["Perfix"] .. "setup club" then
+    elseif msg == getgenv().AltcSettings["Perfix"] .. "setup club" then
         setupclub()
     else
         print("Couldnt find chat / msg not correct.")
