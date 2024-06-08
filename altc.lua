@@ -665,7 +665,7 @@ local players = game:GetService("Players")
 
 local hostuser = players:FindFirstChild(getgenv().AltcSettings["Host"])
     
-if hostuser.Name == getgenv()["Host"] then
+if players.LocalPlayer.Name == getgenv()["Host"] then
     setHostGui()
 end
 
@@ -877,7 +877,6 @@ function setupbank()
 
 end
 
-local hostuser = players:FindFirstChild(getgenv().AltcSettings["Host"])
 
 hostuser.Chatted:Connect(function(msg)
     if msg == getgenv()["Perfix"].."setup bank" then
